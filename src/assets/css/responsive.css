@@ -1,0 +1,203 @@
+/* =====================================================================================
+Author          : tean Codiov
+Making          : Niran Yousuf & Ibrahim hasnat
+Version         : 1.0
+Visit Us        : www.codiov.com
+====================================================================================== */
+/* ===== Big screen Responciv CSS mark up starts ======================== */
+@media only screen and ( min-width: 1280px) {
+}
+/* ===== Big screen Responciv CSS mark up End =========================== */
+/* ===== tablet layout:768px Responciv CSS mark up starts =============== */
+@media only screen and ( min-width: 768px) and (max-width:991px) {
+    header .logo {
+        margin-left: -20px;
+    }
+    .mainMenu ul > li > a {
+        padding-left: 10px;
+    }
+    .mainMenu ul > li:last-child a {
+        padding-right: 0px
+    }
+    .mainMenu {
+        margin-left: 65px;
+        display: block;
+    }
+    .banner-text h2 {
+        font-size: 54px;
+        width: 90%;
+        margin-left: 5%;
+        line-height: 1;
+    }
+    .tracker-form {
+        width: 70%;
+        margin-left: 15%;
+        padding: 16px;
+    }
+    .tracker-form h2 {
+        font-size: 20px;
+        padding: 5px;
+        padding-bottom: 0px;
+    }
+    
+    .section-padding { padding: 46px 0;}
+    .section-title > h2 {
+        font-size: 44px;
+        padding-bottom: 28px;
+    }
+    p {	font-size: 14px;}
+    .blog-content > a, .about > a {	margin: 0;}
+    .content-title > h2 {
+        font-size: 22px;
+        padding-bottom: 18px;
+    }
+    .content-heading > h2 {	font-size: 38px; padding-bottom: 26px;}
+    .right-padding, .left-padding {	padding: 0;}
+    .right-margin, .left-margin {margin: 0;}
+    .info_section {	padding-bottom: 16px;}
+    .info_section li {
+        padding: 2px 0;
+        font-size: 12px;
+        padding-left: 5px;
+    }
+    .info_section li a {font-size: 12px;}
+    .pt45 {	padding-top: 0px;}
+    .blog-content {	padding-bottom: 46px;}
+    .item img {
+        width: 100px;
+        margin-bottom: 36px;
+    }
+    .footer-info {display: none;}
+    /* home page END ================================================== */
+    /* for all page banner ============================================ */
+    .page-banner {height: 300px;}
+    .page-banner > img {height: 300px; width: auto;}
+    .page-heading h2 { font-size: 62px; top: 56px;}
+    /* for about page 1 content ======================================= */
+    .work-icon .fa {font-size: 42px; padding-bottom: 22px;}
+    .single-work-list > .work-icon > .fa {font-size: 42px; padding-bottom: 22px;}
+    .single-work {margin: 0 -15px;}
+    .tab-mb30 {margin-bottom: 30px;}
+    .single-work-list > .work-content {padding-left: 72px;}
+    /* for about page 2 content ======================================= */
+    .work-quality {padding: 0 15px;}
+    .quality-icon .fa {	font-size: 48px;}
+    #map { margin-bottom: -46px;}
+} 
+/* ===== tablet layout:768px Responciv CSS mark up End ================== */
+/* === small mobile layout:767px-360px Responciv CSS mark up starts ===== */
+@media only screen and (max-width:767px) {
+    header .top {padding-left: 15px;}
+    header .logo h2 {
+        font-size: 45px;
+        padding-top: 8px;
+    }
+    header .logo p {
+        padding: 0 2px;
+        margin-top: -14px;
+        padding-bottom: 20px;
+        letter-spacing: 15px;
+    }
+    header .logo { z-index: 1; }
+    .tracker-form {
+        width: 100%;
+        position: inherit;
+        padding: 0px;
+        margin: 0;
+        height: 126px;
+    }
+    .banner-text h2 {
+        font-size: 45px;
+        width: 80%;
+        margin-left: 10%;
+    }
+    .tracker-form h2 {font-size: 16px; padding-bottom: 0px;}
+    .tracker-form #track-id {width: 65%;}
+    .btn.btn-default {width: 35%;}
+    .section-padding { padding: 32px 0;}
+    .section-title > h2 {font-size: 36px; padding-bottom: 22px;}
+    p {	font-size: 14px;}
+    .fit-image {margin-bottom: 22px;}
+    .blog-content > a, .about > a {	margin: 0;}    
+    .content-title > h2 {font-size: 22px; padding-bottom: 16px;}
+    .service-content {padding: 20px 30px;}
+    .single-service {margin-bottom: 28px;}
+    .right-padding, .left-padding {	padding: 0; text-align: inherit;}
+    .right-margin, .left-margin {margin: 0;}
+    .info_section {	padding-bottom: 16px;}
+    .info_section li {
+        display: block;
+        padding: 2px 0;
+        font-size: 12px;
+        padding-left: 0;
+        border-top: 0;
+    }
+    .info_section li a {font-size: 12px;}
+    .pt45 {	padding-top: 0px;}
+    .blog-content {padding-bottom: 28px;}
+    .item img {width: 100px; margin-bottom: 28px;}
+    #testimonial .item {margin: 0;}
+    .footer-info, .footer-news, .footer-links {padding-bottom: 36px; font-size: 14px;}
+    /* home page END ================================================== */
+    .page-banner {height: 250px;}
+    .page-banner > img {height: 250px; width: auto;}
+    .page-heading h2 {font-size: 46px;}
+    .work-icon .fa {font-size: 38px; padding-bottom: 20px;}
+    .single-work {padding: 0 34px; padding-bottom: 36px;}
+    .single-space {display: none;}
+    .single-profile {margin: 0 24px;	margin-bottom: 30px;}
+    
+    /* for about page 2 content ======================================= */
+    .work-quality {padding: 0 34px; padding-bottom: 36px;}
+    .quality-icon .fa {	font-size: 48px;}
+    #map { margin-bottom: -32px;}
+    .pb45 {	padding-bottom: 36px;}
+    .blog-content, .blog2-content {margin-bottom: 42px;}
+    .pb70 {	padding: 0;}
+    .blog-search, .blog-category, .blog-tags,
+    .recent-news {margin-top: 42px;}
+    .single-work-list > .work-content {	padding-left: 75px;}
+    .single-work-list > .work-icon > .fa {font-size: 50px;}
+    .service p {text-align: left;}
+    /* responsive mobile menu */
+    
+    nav .fa-bars {
+        display: block;
+    }
+    .mainMenu {
+        display: none;
+        text-align: left;
+        border-top: 1px solid #fff;
+        background: #5d4037;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        width: 100%;
+    }
+    .mainMenu > ul > li {
+        display: block;
+    }
+    .mainMenu ul > li > a {
+        padding: 15px;
+/*        border-bottom: 1px solid #fff;*/
+    }
+    .dropMenu::after {top: 15px;}
+    .dropMenu .subMenu {
+        position: inherit;
+        top: 0;
+        width: 100%;
+    }
+    
+}
+/* === small mobile layout:767px-360px Responciv CSS mark up END ======== */
+/* ===== Responciv CSS mark up END ====================================== */
+
+@media only screen and (max-width:480px) {
+    .banner-text h2 {
+        font-size: 22px;
+        width: 80%;
+        margin-left: 10%;
+        margin-top: -100px;
+    }
+}

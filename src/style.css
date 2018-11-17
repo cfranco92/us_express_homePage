@@ -1,0 +1,851 @@
+/* =====================================================================================
+Author          : tean Codiov
+Making          : Niran Yousuf & Ibrahim hasnat
+Version         : 1.0
+Visit Us On       : www.codiov.com
+====================================================================================== */
+/* ====================== table of content ============================================
+1) google font
+2) header top
+3) header logo
+4) mainMenu & dropMenu
+5) banner and banner text
+6) our service with service page
+7) blog with blog page
+8) testimonials
+9) footer
+10) page banner
+======================================================================================= */
+/* ================================ google fonts  list ================================ */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600');
+/* ================================ common css ======================================== */
+html, body, div, span, h2, h3, h4, p,
+a, address, img, ul, li, form, label,
+footer, header, menu, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+    line-height: 1.5;
+}
+ol, ul {list-style: none;}
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+	line-height: 1;
+    background-color: #fff;
+    color: #000;
+}
+section:nth-child(odd){background: #f3f3f3;} 
+.section-padding {padding: 70px 0;}
+.section-title > h2 {
+	font-size: 56px;
+	padding-bottom: 36px;
+	font-weight: 300;
+	letter-spacing: 2px;
+	color: #4e342e;
+	text-align: center;
+	text-transform: uppercase;
+}
+.content-heading > h2 {
+    font-size: 46px;
+	font-weight: 300;
+	letter-spacing: 2px;
+	color: #4e342e;
+    text-align: center;
+	padding-bottom: 30px;
+    text-transform: capitalize;
+}
+.content-title > h2 {
+	font-size: 32px;
+	padding-bottom: 26px;
+	font-weight: 300;
+    text-transform: capitalize;
+}
+.section-title p {
+    margin: 0 15%;
+    margin-bottom: 56px;
+    width: 70%;
+}
+h4 {
+    font-size: 18px;
+    text-transform: capitalize;
+    padding-bottom: 26px;
+}
+p { font-size: 16px;}
+a {
+    text-decoration: none;
+    color: #4e342e;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+a:hover {
+    text-decoration: none;
+    color: #8d6e63;
+}
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+a .fa {
+	padding: 5px;
+	font-size: 12px;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.fit-image {
+    width: 100%;
+    overflow: hidden;
+}
+/* for 45px padding top =============================================================== */
+.pt45 {padding-top: 45px;}
+/* for common padding bottom ========================================================== */
+.pb45 {padding-bottom: 45px;}
+.pb70 {padding-bottom: 70px;}
+/* space for multiple row in a section ================================================ */
+.single-space { padding : 35px;}
+/* ====================== Common CSS markpu END ======================================= */
+/* ======================== preloader spy scroll css ================================== */
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background: #fff;
+}
+
+#preloader:after, #preloader:before {
+	position: absolute;
+	content: "";
+	display: block;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
+#preloader:before {
+	background: #4e342e;
+	left: 50%;
+	top: 50%;
+	-webkit-animation: pulse 1000ms linear infinite;
+	        animation: pulse 1000ms linear infinite;
+	margin-left: -30px;
+	margin-top: -30px;
+	position: absolute;
+} 
+#preloader:after {
+	background: #4e342e;
+	left: 50%;
+	top: 50%;
+	-webkit-animation: pulse 1000ms linear 500ms infinite;
+	        animation: pulse 1000ms linear 500ms infinite;
+	margin-left: -30px;
+	margin-top: -30px;
+}
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  }
+  100% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  }
+}
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  }
+  100% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  }
+}
+/* ========================== usefull common css END ================================== */
+/*  HOME PAGE = HOME PAGE = HOME PAGE = HOME PAGE = HOME PAGE = HOME PAGE = HOME PAGE  */
+/* ====================== header section css markup =================================== */
+header {background: #4e342e;}
+/* ==================== header top css markup ========================================= */
+header .top {
+	background: #3e2723;
+	height: 32px;
+	width: 100%;
+	z-index: 999;
+}
+header .top > div ul li {
+	display: inline-block;
+	font-size: 12px;
+	color: #fff;
+	padding: 5px;
+	border-right: 1px solid #5d4037;
+	padding-right: 25px;
+}
+header .top > div ul li:last-child {
+    border: 0;
+    padding-right: 10px;
+}
+header .top > div ul li span {
+	color: #fff;
+	padding-right: 10px;
+	font-size: 14px;
+}
+/* ==================== header top css markup END ===================================== */
+/* ==================== logo css markup =============================================== */
+header .logo {
+	position: relative;
+	z-index: 99;
+}
+header .logo h2 {
+	color: #fff;
+	letter-spacing: 12px;
+	font-size: 56px;
+	font-weight: 600;
+    text-transform: uppercase;
+}
+header .logo p {
+	color: #fff;
+	letter-spacing: 17px;
+	padding: 0 5px;
+	text-transform: uppercase;
+	margin-top: -14px;
+	padding-bottom: 20px;
+}
+/* ==================== logo css markup END =========================================== */
+/* ==================== menu css markup starts ======================================== */
+nav {
+    position: relative;
+    margin: 0 -15px;
+}
+nav .fa-bars {
+    display: none;
+	position: absolute;
+	color: #fff;
+	right: 15px;
+	top: -75px;
+	font-size: 34px;
+	padding: 2px 5px;
+	border: 1px solid #fff;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.mainMenu {
+	text-align: center;
+	display: block;
+}
+.mainMenu > ul > li {display: inline-block;}
+.mainMenu ul > li > a {
+	position: relative;
+	display: block;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 45px 20px;
+	padding-right: 50px;
+}
+.mainMenu ul li a:after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    background-color: #8d6e63;
+    height: 5px;
+    width: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+.mainMenu ul li a:hover:after { width: 100%; }
+.dropMenu {position: relative;}
+.dropMenu:after {
+	content: "\f101";
+	position: absolute;
+	font: 18px fontawesome;
+	right: 20px;
+	top: 48px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 1;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+}
+.dropMenu:hover:after {
+	-webkit-transform: rotate(90deg);
+	        transform: rotate(90deg);
+}
+.dropMenu .subMenu {
+	width: 180px;
+	padding: 0;
+	display: none;
+	background: #6d4c41;
+	position: absolute;
+	z-index: 99;
+	text-align: left;
+	top: 114px;
+	left: 0px;
+}
+.dropMenu > ul.subMenu > li{display: block;}
+.dropMenu > ul.subMenu > li > a {
+	position: relative;
+	display: block;
+	padding: 15px;
+	color: #fff;
+	font-size: 15px;
+}
+/* ==================== menu css markup END =========================================== */
+/* ==================== banner css markup starts ====================================== */
+.banner {
+	max-height: 800px;
+	position: relative;
+	overflow: hidden;
+}
+.dark-overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: rgba(0, 0, 0, 0.7);
+}
+.banner-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.banner-text h2 {
+	font-size: 72px;
+	text-transform: uppercase;
+	width: 60%;
+	font-weight: 600;
+	margin-left: 20%;
+	color: #fff;
+	line-height: 1.4;
+}
+/* ==================== sliding banner css markup starts ============================== */
+.single-banner {
+    position: relative;
+}
+.single-banner::before {
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+}
+/* ==================== sliding banner css markup END ================================= */
+/* ==================== tracker-form css markup END =================================== */
+.tracker-form {
+	width: 50%;
+	margin-left: 25%;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	bottom: 0;
+	padding: 20px;
+	left: 0;
+}
+.tracker-form h2 {
+	font-size: 22px;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+	margin: 0;
+	padding-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.tracker-form .form-group {
+	display: block;
+	width: 90%;
+	margin-left: 5%;
+}
+.tracker-form .form-group input:hover {
+	background: #3e2723;
+}
+.tracker-form .form-group input{
+    border-radius: 0;
+    margin-bottom: 10px;
+    background: #6d4c41;
+    color: #fff;
+}
+.tracker-form .form-group input:focus{
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(255, 255, 255,.6);
+    border-bottom-color: #fff;
+}
+.tracker-form #track-id {
+	width: 80%;
+	float: left;
+	height: 34px;
+	padding-left: 20px;
+	background: #fff;
+}
+.btn.btn-default {
+	float: left;
+	width: 20%;
+    font-weight: 700;
+}
+/* ==================== banner css markup END ========================================= */
+/* ==================== about us css markup starts ==================================== */
+.blog-content > a, .about > a {
+	display: inline-block;
+	margin: 36px 0;
+	padding: 5px 0px;
+	color: #6d4c41;
+	text-transform: capitalize;
+	font-weight: 600;
+	margin-bottom: 0;
+    position: relative;
+}
+.blog-content > a:after, .about > a:after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 0;
+    left: 0px;
+    bottom: 0px;
+    background: #6d4c41;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+}
+.blog-content > a:hover:after, .about > a:hover:after { width: 95%;}
+.blog-content a {
+    font-style: italic;
+}
+.blog2-content a {
+	padding-left: 10px;
+    font-style: italic;
+}
+.page-link { padding-top: 36px;}
+.page-link a{
+    display: inline-block;
+    color:  rgb(109, 76, 65);
+    background: transparent;
+    padding: 8px 30px;
+    border: 2px solid rgba(109, 76, 65, 0.5);
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 600;
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
+}
+.page-link a:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: #e0e0e0;
+    height: 100%;
+    width: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    z-index: -1
+}
+.page-link a:hover:after{width: 100%;}
+.single-image {padding: 30px 0;}
+
+/* ================= single blog page css markup starts =============================== */
+.blog-comment > li {margin-bottom: 30px;}
+.blog-commnet li:last-child { margin-bottom: 0px;}
+.user-info {
+	display: inline-block;
+	padding: 20px;
+	background: #FEEDE2;
+}
+.user-info .reply-btn {
+	border: 1px solid #6d4c41;
+	padding: 5px 20px;
+	float: right;
+	text-transform: capitalize;
+}
+.user-info h3 {
+    font-size: 22px;
+    text-transform: capitalize;
+    margin-bottom: 14px;
+}
+.user-info img{
+    width: 72px;
+    float: left;
+    margin-right: 30px;
+}
+.reply-comment {
+	margin-left: 60px;
+	margin-top: 15px;
+}
+.reply-comment > li {margin-bottom: 14px;}
+/* ================= single blog page css markup END ================================== */
+/* ==================== service us css markup starts ================================== */
+.single-service {background: #fff;}
+.service-image {
+	display: block;
+	overflow: hidden;
+}
+.service-image img {
+	-webkit-transition: 500ms;
+	transition: 500ms;
+}
+.single-service .service-content p {padding-bottom: 10px;}
+.single-service:hover .service-image img{
+	-webkit-transform: scale(1.07) rotate(3deg);
+	        transform: scale(1.07) rotate(3deg);
+}
+.service-content {padding: 30px;}
+.service-content > a {
+	font-weight: 600;
+	font-style: italic;
+	color: #4e342e;
+    font-size: 16px;
+    padding-top: 10px;
+    text-transform: capitalize;
+}
+.service-content > a:hover {font-style: inherit;}
+/* ==================== service us css markup END ===================================== */
+/* ==================== blog page us css markup starts ================================ */
+.left-padding {
+    padding-left: 10%;
+    text-align: right;
+    padding-right: 30px;
+}
+.right-padding {
+	padding-right: 10%;
+	padding-left: 30px;
+}
+.blog-image {
+    margin: 0 -15px;
+    padding: 0;
+}
+.right-margin {margin-right: -105px;}
+.left-margin {margin-left: -105px;}
+.info_section {padding-bottom: 36px;}
+.info_section li {
+	display: inline-block;
+	font-size: 16px;
+	color: #6d4c41;
+    padding: 5px 0;
+	padding-left: 14px;
+	border-bottom: 1px dashed #6d4c41;
+	border-top: 1px dashed #6d4c41;
+}
+.info_section li:first-child {padding-left: 0;}
+.info_section li a {
+	font-size: 16px;
+	color: #4e342e;
+	font-style: italic;
+	padding: 0 8px;
+}
+.blog-content {	display: inline-block;}
+.blog-content img {
+	margin: 0px 36px 22px 0px;
+	width: 30%;
+	height: auto;
+	float: left;
+}
+/* ==================== blog jpage side bar css ======================================= */
+.recent-news ul li img {
+	width: 63px;
+	float: left;
+	display: block;
+	clear: both;
+	margin-right: 10px;
+}
+.recent-news ul li h4 a {
+	font-size: 18px;
+	display: block;
+    margin-bottom: 0;
+    color: #6d4c41;
+}
+.recent-news ul li p {
+	font-size: 16px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+.recent-news ul li:last-child { margin: 0}
+.recent-news ul li {
+	display: block;
+	margin-bottom: 22px;
+	clear: both;
+	height: 80px;
+}
+/* ==================== blog page us css markup starts ================================ */
+.blog-category > ul > li{ border-bottom: 1px dashed #5d4037;}
+.blog-category > ul > li > a {
+	font-size: 18px;
+	padding: 10px 0px;
+	display: block;
+}
+.blog-category > ul > li > a > span {
+	float: right;
+	font-weight: 600;
+}
+/* ==================== blog page tag wiget starts ==================================== */
+.blog-tags > ul > li {
+	display: inline-block;
+	padding: 5px;
+}
+.blog-tags > ul > li > a {
+	display: block;
+	padding: 5px 10px;
+	border: 1px solid #6d4c41;
+	border-radius: 3px;
+}
+/* ==================== blog page seacrch starts ====================================== */
+.blog-search {
+	display: inline-table;
+	width: 100%;
+}
+.blog-search > form {
+    border-bottom: 2px solid #5d4037;
+    padding: 10px;
+    position: relative;
+}
+.blog-search > form > input {
+	font-size: 18px;
+	width: 100%;
+	border: 0;
+}
+.blog-search > form > button {
+	position: absolute;
+	width: 50px;
+	right: 20px;
+	top: 0;
+	line-height: 50px;
+	height: 50px;
+	background: transparent;
+	border: transparent;
+    z-index: 9;
+}
+.blog-search > form > button > .fa-search{
+    color: #5d4037;
+    font-size: 18px;
+}
+/* ==================== blog page us css markup END =================================== */
+/* ================= testimonials page us css markup starts =========================== */
+.slider { position: relative;}
+/* ===================== owlCarousel CSS ============================================== */
+#testimonial .item { margin: 0 20%;}
+.item img {
+	height: auto;
+	width: 136px;
+	border-radius: 50%;
+	margin-bottom: 60px;
+	border: 5px solid rgba(109, 76, 65, 0.3);
+}
+blockquote {
+	border-left:  5px solid rgba(109, 76, 65, 0.3);
+	text-align: left;
+}
+.owl-theme .owl-controls .owl-buttons div {display: none;}
+/* ==================== owlCarousel CSS  END ========================================== */
+/* ================= testimonials page us css markup END ============================== */
+/* ================= footer page us css markup starts ================================= */
+#footer {
+	background: #4e342e;
+    color: #fff;
+}
+#footer p, #footer .content-title > h2 {color: #fff;}
+.footer-links ul li a {
+	color: #fff;
+	font-size: 16px;
+	padding: 5px 0;
+	display: block;
+}
+.footer-links ul li a:hover {color: #aeaeae;}
+.footer-news ul li img {
+	width: 60px;
+	float: left;
+	display: block;
+	clear: both;
+	margin-right: 10px;
+}
+.footer-news ul li h4 {padding: 5px 0;}
+.footer-news ul li h4 a:hover {	color: #aeaeae;}
+.footer-news ul li h4 a {
+	font-size: 18px;
+	color: #fff;
+	display: block;
+}
+.footer-news ul li p {
+	font-size: 14px;
+    font-style: italic;
+}
+.footer-news ul li:last-child { margin: 0}
+.footer-news ul li {
+	display: block;
+	margin-bottom: 22px;
+}
+.address li {font-size: 18px;}
+.footer-text p {
+    font-size: 12px;
+    margin-top: 15px;
+    padding: 15px;
+    text-align: center;
+}
+/* ================= footer page css markup END ======================================= */
+/* ================= common for all pades css markup starts =========================== */
+.page-banner {
+    max-height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+.page-heading h2 {
+	font-size: 86px;
+	position: absolute;
+	top: 0;
+	text-align: center;
+	width: 100%;
+	color: #fff;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	left: 0;
+	height: 100%;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+/* ================= common for all pades css markup END ============================== */
+/* ================= about page css markup starts ===================================== */
+.work-icon .fa {
+	color: #4e342e;
+	font-size:62px;
+    padding-bottom: 30px;
+}
+.work-quality {
+    margin: 0 -15px;
+	padding: 0 45px;
+}
+.single-work-list {padding-bottom: 36px;}
+.single-work-list > .work-content > .content-title > h2 {padding-bottom: 10px;}
+.single-work-list > .work-content {padding-left: 100px;}
+.single-work-list > .work-icon > .fa {
+	color: #4e342e;
+	font-size:62px;
+    float: left;
+    padding: 30px 0;
+}
+.quality-icon .fa {
+	color: #4e342e;
+	font-size:72px;
+    padding-bottom: 30px;
+}
+/* tastimonial area */
+.single-profile {
+    border: 2px solid #4e342e;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+}
+.profile-image {
+	display: block;
+	overflow: hidden;
+}
+.profile-image img {
+	-webkit-transition: 500ms;
+	transition: 500ms;
+}
+.single-profile:hover .profile-image img{
+	-webkit-transform: scale(1.05) rotate(3deg);
+	        transform: scale(1.05) rotate(3deg);
+}
+.profile-name {
+	padding: 14px 0;
+	background: #4e342e;
+	color: #fff;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+}
+.single-profile:hover {border-color: #000;}
+.single-profile:hover .profile-name {background: #000;}
+.profile-name h4{padding: 0;}
+.single-client img {padding: 20px;}
+.owl-theme .owl-controls .owl-page span {background: #4e342e;}
+/* ================= about page css markup END ======================================== */
+/* ================= contact page css markup starts =================================== */
+.form-control {
+    display: block;
+    border: 0px;
+    width: 100%;
+    height: 45px;
+    padding: 5px 0px;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #6d4c41;
+    background-color: transparent;
+    background-image: none;
+    border-radius: 0px;
+    box-shadow: none;
+    border-bottom: 1px solid  rgba(109, 76, 65, 0.3);
+    margin-bottom: 25px;
+    padding-left: 10px;
+}
+.form-control:focus {
+    border-color:  rgb(109, 76, 65);
+    outline: 0;
+    box-shadow: none;
+}
+.contact-form input[type='submit']:hover {
+    background: #e0e0e0;
+}
+.contact-form input[type='submit'] {
+    display: inline-block;
+    color:  rgb(109, 76, 65);
+    background: transparent;
+    padding: 10px 25px;
+    border: 2px solid rgba(109, 76, 65, 0.5);
+    border-radius: 3px;
+}
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn:active:focus, .btn:focus {outline: none;}
+#map {
+    width: 100%;
+    height: 500px;
+    margin-bottom: -70px;
+}
+/* ================= contact page css markup END ====================================== */
+/* ================= 404 not found error page css markup  ============================= */
+.error-page{
+    max-height: 570px;
+    position: relative;
+    overflow: hidden;
+}
+.error-page-link > a{
+    display: inline-block;
+    color:  rgb(255, 255, 255);
+    background: transparent;
+    padding: 8px 30px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 600;
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ================= 404 not found error page css markup END ========================== */
