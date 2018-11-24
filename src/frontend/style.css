@@ -175,10 +175,10 @@ img{
 /* ========================== usefull common css END ================================== */
 /*  HOME PAGE = HOME PAGE = HOME PAGE = HOME PAGE = HOME PAGE = HOME PAGE = HOME PAGE  */
 /* ====================== header section css markup =================================== */
-header {background: #4e342e;}
+header {background: #003d7b;}
 /* ==================== header top css markup ========================================= */
 header .top {
-	background: #3e2723;
+	background: #e4152b;
 	height: 32px;
 	width: 100%;
 	z-index: 999;
@@ -387,7 +387,7 @@ nav .fa-bars {
 .tracker-form .form-group input{
     border-radius: 0;
     margin-bottom: 10px;
-    background: #6d4c41;
+    background: #e4152b;
     color: #fff;
 }
 .tracker-form .form-group input:focus{
@@ -661,7 +661,7 @@ blockquote {
 /* ================= testimonials page us css markup END ============================== */
 /* ================= footer page us css markup starts ================================= */
 #footer {
-	background: #4e342e;
+	background: #003d7b;
     color: #fff;
 }
 #footer p, #footer .content-title > h2 {color: #fff;}
