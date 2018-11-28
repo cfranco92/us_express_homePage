@@ -135,9 +135,10 @@
             <!-- tracking form -->
             <div class="tracker-form text-center">
                 <h2>Ingresa el <span class="text-uppercase">LINK</span> del artículo y haz click en calcular.</h2>
-                <form action="#">
+                <form action="/timestamp/" method="POST">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="track-id" placeholder="URL">
+                        <!-- <input type="text" class="form-control" id="track-id" placeholder="URL"> -->
+                        <input id="track-id" type="text" name="link" placeholder="URL">
                         <input type="submit" class="btn btn-default" value="Enviar">
                     </div>
                 </form>
@@ -469,6 +470,7 @@
             </div><!-- row END -->
         </div><!-- container END -->
     </footer>
+    <script type="text/javascript" src="functions.js"></script>
     <!-- footer area html markup END -->
     <!-- JS PLUGIN AREA JS PLUGIN AREA -->
     <!-- jQuery js scriipt plugin -->
