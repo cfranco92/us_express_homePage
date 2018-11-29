@@ -10,39 +10,29 @@ const app = express();
 //   response.send(request);
 // });
 
-app.post('/timestamp', (req, res) => {
+app.post('/timestamp', (req, res) => { 
   let url= req.body.link;
-  // res.send(url);
-
-  puppeteer
-  .launch()
-  .then( (browser) =>{
-    return browser.newPage();
-    
-  })  
-  .then((page) => {
-    return page.goto(url).then(function() {
-      return page.content();
-    });
-  })
-  .then((html) =>{	
+  (async () => {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.goto(url);
+    const html = await page.content();
     let name = $('#productTitle', html).text();    
     let price = $('#priceblock_ourprice', html).text();
     let urlPhoto = $('#landingImage', html).attr('src');
     console.log(name);
     console.log(price);
     console.log(urlPhoto);
-    let product = {
+    var product = {
       "nombre": name,
       "precio": price,
       "url": urlPhoto
-    }
+    }  
+    await browser.close();
     return res.send(product);
-  })
-  .catch(function(err) {
-	  //handle error
-	  console.error(err);
-  });
+  })();  
 });
+
+
 
 exports.app = functions.https.onRequest(app);
