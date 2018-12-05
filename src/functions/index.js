@@ -10,10 +10,17 @@ app.engine('hbs', engines.handlebars);
 app.set('views', './views');
 app.set('view engine', 'hbs');
 
+var product;
+
+app.get('/productDetail', (req, res) => {
+  res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
+  res.render('detalleProducto', { product });
+})
+
 app.post('/timestamp', (req, res) => { 
   let url= req.body.link;
-  var page, product;
-  puppeteer
+  var page;  
+  puppeteer  
   .launch()
   .then( (browser) =>{
     return browser.newPage();
@@ -39,12 +46,13 @@ app.post('/timestamp', (req, res) => {
       "url": urlPhoto
     }
     // return res.send(product);
-    return res.render('detalleProducto', { product });
-  })
+    res.set('Cache-Control', 'public, max-age=300, s-maxage=600');    
+    return res.render('detalleProducto', { product });    
+  })  
   .catch( (err) =>{
 	  //handle error
 	  console.error(err);
-  });
+  });  
 });
 
 
