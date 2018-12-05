@@ -12,25 +12,43 @@ const app = express();
 
 app.post('/timestamp', (req, res) => { 
   let url= req.body.link;
-  (async () => {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.goto(url);
-    const html = await page.content();
+  var page;
+  puppeteer
+  .launch()
+  .then( (browser) =>{
+    return browser.newPage();
+    
+  })  
+  // .then((page) => {
+  //   return page.goto(url).then(function() {
+  //     return page.content();
+  //   });
+  // })
+  .then((pageReq)=>{
+    page = pageReq;
+    return page.goto(url)
+  })
+  .then(()=>{
+    return page.content();
+  })
+  .then((html) =>{	
     let name = $('#productTitle', html).text();    
     let price = $('#priceblock_ourprice', html).text();
     let urlPhoto = $('#landingImage', html).attr('src');
     console.log(name);
     console.log(price);
     console.log(urlPhoto);
-    var product = {
+    let product = {
       "nombre": name,
       "precio": price,
       "url": urlPhoto
-    }  
-    await browser.close();
+    }
     return res.send(product);
-  })();  
+  })
+  .catch( (err) =>{
+	  //handle error
+	  console.error(err);
+  });
 });
 
 

@@ -175,7 +175,7 @@ img{
 /* ========================== usefull common css END ================================== */
 /*  HOME PAGE = HOME PAGE = HOME PAGE = HOME PAGE = HOME PAGE = HOME PAGE = HOME PAGE  */
 /* ====================== header section css markup =================================== */
-header {background: #003d7b;}
+header {background: #fff;}
 /* ==================== header top css markup ========================================= */
 header .top {
 	background: #e4152b;
@@ -230,12 +230,12 @@ nav {
 nav .fa-bars {
     display: none;
 	position: absolute;
-	color: #fff;
+	color: #000000;
 	right: 15px;
 	top: -75px;
 	font-size: 34px;
 	padding: 2px 5px;
-	border: 1px solid #fff;
+	border: 1px solid #000000;
 	border-radius: 3px;
 	cursor: pointer;
 }
@@ -247,7 +247,7 @@ nav .fa-bars {
 .mainMenu ul > li > a {
 	position: relative;
 	display: block;
-	color: #fff;
+	color: #000000;
 	font-size: 16px;
 	font-weight: 600;
 	padding: 45px 20px;
@@ -272,7 +272,7 @@ nav .fa-bars {
 	font: 18px fontawesome;
 	right: 20px;
 	top: 48px;
-	color: #fff;
+	color: #000000;
 	cursor: pointer;
 	z-index: 1;
     -webkit-transition: 300ms;
@@ -304,7 +304,7 @@ nav .fa-bars {
 /* ==================== menu css markup END =========================================== */
 /* ==================== banner css markup starts ====================================== */
 .banner {
-	max-height: 800px;
+	max-height: 500px;
 	position: relative;
 	overflow: hidden;
 }
