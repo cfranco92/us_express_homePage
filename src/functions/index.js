@@ -3,12 +3,12 @@ const express = require('express');
 
 const puppeteer = require('puppeteer');
 const $ = require('cheerio');
+const engines = require('consolidate');
 
 const app = express();
-// app.get('/timestamp', (request, response) => {
-//   // response.send(`${Date.now()}`);  
-//   response.send(request);
-// });
+app.engine('hbs', engines.handlebars);
+app.set('views', './views');
+app.set('view engine', 'hbs');
 
 app.post('/timestamp', (req, res) => { 
   let url= req.body.link;
@@ -38,7 +38,8 @@ app.post('/timestamp', (req, res) => {
       "precio": price,
       "url": urlPhoto
     }
-    return res.send(product);
+    // return res.send(product);
+    return res.render('detalleProducto', { product });
   })
   .catch( (err) =>{
 	  //handle error
