@@ -12,18 +12,13 @@ const app = express();
 
 app.post('/timestamp', (req, res) => { 
   let url= req.body.link;
-  var page;
+  var page, product;
   puppeteer
   .launch()
   .then( (browser) =>{
     return browser.newPage();
     
-  })  
-  // .then((page) => {
-  //   return page.goto(url).then(function() {
-  //     return page.content();
-  //   });
-  // })
+  })    
   .then((pageReq)=>{
     page = pageReq;
     return page.goto(url)
@@ -38,7 +33,7 @@ app.post('/timestamp', (req, res) => {
     console.log(name);
     console.log(price);
     console.log(urlPhoto);
-    let product = {
+    product = {
       "nombre": name,
       "precio": price,
       "url": urlPhoto
